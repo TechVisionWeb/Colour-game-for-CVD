@@ -1,0 +1,1929 @@
+*{
+    box-sizing: border-box;
+ 
+  }
+html{
+    display: block;
+    width: 100%;
+
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+ 
+}
+.display-none-important{
+  display: none !important;
+}
+
+.display-none {
+    display: none ;
+  }
+
+body{
+    display: block;
+    width: inherit;
+    max-width: 1380px;
+    margin: 0 auto;
+    height: calc(100vh + 2rem);
+
+
+}
+
+
+ 
+ 
+.login-modal__form{
+     padding: 0;
+     width: 100%;
+     height: 100%;
+}
+button {
+    color:white;
+    background-color: rgba(75, 73, 73, 0.719) ;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border: 2px solid black;
+    font-weight: 500;
+    border-radius: 5px;
+
+}
+
+#results{
+    font-size: 2rem;
+    margin: 5rem;
+}
+button:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+
+}
+a:link , a:active{
+    text-decoration:underline;
+
+   margin-left: 1rem;
+   padding: 0.25rem;
+   color: black;
+   background-color: white;
+   border-radius: 5px;
+
+}
+
+a:hover {
+
+    text-decoration: none;
+    padding: 0.25rem;
+
+  background-color: black;
+  color: white;
+
+}
+ 
+#start-experiment,.continue,.next-task{
+
+    display: block;
+    width: calc(100% - 300px);
+    min-width: 300px;
+    margin: 2rem auto;
+}
+
+ 
+.experiment-container{
+  width: 100%;
+  margin-bottom: 0.5rem;
+  
+
+}
+
+ .experiment-container__status{
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+    padding: 1rem;
+
+ }
+
+ 
+
+.experiment-container__hue-block-container{
+
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+
+ }
+
+.experiment-container__hue-block{
+
+   
+    border: 1px solid black;
+    text-align: center;
+}
+.experiment-container__hue-block--sorted-aided{
+    margin: 0 auto;
+
+
+ }
+.experiment-container__hue-block--big{
+    width: 200px;
+    height: 200px;
+    
+
+}
+.colourInformation{
+    display: block;
+    width: 90%;
+    margin: 0.5rem auto;
+    text-align: center;
+
+}
+.num-subtasks{
+
+    font-weight: 800;
+}
+.hover-droppable{
+
+ 
+    border: 6px dashed black;
+   
+  }
+  
+.draggable-trans{
+    display: flex;
+    flex-direction: row;
+   width: fit-content;
+    position: relative;
+     margin: 1rem auto;
+} 
+
+#draggable-trans-example, #draggable-trans-unaided, #draggable-trans-aided{
+
+    position: relative;
+    display: flex;
+}
+
+#draggable{
+    position: sticky;
+}
+input{
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+
+label{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+.login-modal {
+    position: absolute;
+   display: flex;
+   flex-direction: column;
+   left:0;
+   top:0;
+   z-index:10;
+   width: 100%;
+   height: inherit;
+   align-items: center;
+   justify-content: center;
+   background-color: rgba(252, 252, 252, 0.5);
+   backdrop-filter: blur(10px);
+   -webkit-backdrop-filter: blur(10px);
+
+   
+}
+ 
+.login-modal__content {
+      
+     background-color: black;
+     color: white;
+     min-width: 300px;
+     max-width: 550px;
+    padding: 1rem;
+    border-radius: 5px;
+
+
+}
+.grid-container{
+    display: grid;
+    grid-template-areas: "header" "main";
+    grid-template-columns: auto;
+    grid-template-rows: 250px auto;
+    height: calc(100vh + 2rem);
+    overflow-y: scroll;
+
+    max-width: inherit;
+    margin: 0 auto;
+
+
+
+
+}
+.header {
+    display: flex;
+    flex-direction: column;
+    grid-area: header;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+}
+
+
+ h1{
+    color: white;
+    font-size: 1.7rem;
+    padding: 1rem;
+    text-align: center;
+    font-weight: 900;
+
+  }
+
+  h2{
+     color: white;
+     font: inherit;
+     font-size: 1.6rem;
+
+     font-weight: 800;
+
+     padding: 0.5rem;
+
+
+  }
+.main{
+    border: 1px solid black;
+    grid-area: main;
+    width: 100%;
+
+ }
+
+ 
+ .header__status{
+    display: flex;
+    color: white;
+
+    flex-direction: row;
+   width: 100%;
+   justify-content: space-between;
+    
+ }
+
+ .header__mode, .header__code{
+    background-color: black;
+    color: white;
+    width: 200px;
+    padding: 0.5rem;
+    font-weight: 900;
+    border: 4px solid white;
+    margin-left: 5px;
+    margin-right: 5px;
+
+ }
+
+.faq{
+    margin-top: 0.5rem;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+
+   
+
+}
+
+.colour-iconizer, .colour-mix {
+    width: 100px;
+    height: 100px;
+
+}
+
+.experiment-container__hue-block--small{
+
+    width: 100px;
+    height: 100px;
+}
+
+.experiment-container__hue-block--margin{
+
+    margin: 1rem auto;
+
+}
+.experiment-container__sorting-pane{
+    display: block;
+    margin: 0 auto;
+    position: sticky;
+    width: fit-content;
+}
+.colour-mix-container{
+    background-color: white;
+
+}
+
+.img--overlay-move-up {
+    position: absolute;
+    display: block;
+     bottom: 0px;
+ 
+}
+.img--overlay-move-down{
+    position: absolute;
+    display: block;
+     top: 0px;
+     
+   
+ }
+.num-sorts{
+    font-weight: 900;
+}
+.timer{
+    font-weight: 900;
+
+}
+.symbol-containers{
+ display: flex;
+ flex-direction: row;
+ margin: 1rem auto;
+ justify-content: center;
+
+}
+
+.colour-mix-container{
+    margin: 0 10px 0 10px;
+
+}
+.colour-mix-container, .colour-iconizer-container{
+
+    line-height: 0;
+    display: block;
+    position: relative;
+    height: fit-content;
+}
+ 
+
+.colour-iconizer-container{
+    display: block;
+    margin: 0 auto;
+  }
+
+
+.experiment-container__hue-block--protan-pink-1  {
+    background-color: rgb(203, 156, 164);
+}
+.experiment-container__hue-block--protan-pink-2  {
+    background-color: rgb(208, 161, 169);
+}
+.experiment-container__hue-block--protan-pink-3  {
+    background-color: rgb(214, 166, 175);
+}
+
+.experiment-container__hue-block--protan-pink-4  {
+    background-color: rgb(219, 172, 180);
+}
+.experiment-container__hue-block--protan-pink-5  {
+    background-color: rgb(225, 177, 185);
+}
+
+.experiment-container__hue-block--protan-grey-1  {
+    background-color: rgb(168, 168, 168);
+}
+
+.experiment-container__hue-block--protan-grey-2  {
+    background-color: rgb(173, 173, 173);
+}
+
+.experiment-container__hue-block--protan-grey-3  {
+    background-color: rgb(178, 178, 178);
+}
+
+.experiment-container__hue-block--protan-grey-4  {
+    background-color: rgb(184, 184, 184);
+}
+
+.experiment-container__hue-block--protan-grey-5  {
+    background-color: rgb(189, 189, 189);
+}
+
+.experiment-container__hue-block--protan-purple-1  {
+    background-color: rgb(135, 0, 213);
+}
+.experiment-container__hue-block--protan-purple-2  {
+    background-color: rgb(139, 0, 214);
+}
+
+.experiment-container__hue-block--protan-purple-3  {
+    background-color: rgb(142, 0, 217);
+}
+
+.experiment-container__hue-block--protan-purple-4  {
+    background-color: rgb(146, 26, 221);
+}
+
+.experiment-container__hue-block--protan-purple-5 {
+    background-color: rgb(152, 43, 225);
+}
+
+
+.experiment-container__hue-block--protan-green-1  {
+    background-color: rgb(57, 252, 57);
+}
+.experiment-container__hue-block--protan-green-2  {
+    background-color: rgb(70, 255, 70);
+}
+
+.experiment-container__hue-block--protan-green-3  {
+    background-color: rgb(81, 255, 81);
+}
+.experiment-container__hue-block--protan-green-4  {
+    background-color: rgb(81, 255, 81);
+}
+.experiment-container__hue-block--protan-green-5  {
+    background-color: rgb(101, 255, 101);
+}
+
+.experiment-container__hue-block--protan-yellow-1  {
+    background-color: rgb(226, 226, 0);
+  
+}
+
+.experiment-container__hue-block--protan-yellow-2  {
+    background-color: rgb(233, 233, 31);
+  
+}
+
+.experiment-container__hue-block--protan-yellow-3  {
+    background-color: rgb(241, 241, 51);
+  
+}
+
+.experiment-container__hue-block--protan-yellow-4  {
+    background-color: rgb(248, 248, 66);
+  
+}
+
+.experiment-container__hue-block--protan-yellow-5  {
+    background-color: rgb(255, 255, 79);
+  
+}
+
+.experiment-container__hue-block--protan-blue-1  {
+    background-color: rgb(42, 42, 232);
+  
+}
+.experiment-container__hue-block--protan-blue-2  {
+    background-color: rgb(54, 54, 232);
+  
+}
+
+.experiment-container__hue-block--protan-blue-3  {
+    background-color: rgb(63, 63, 234);
+  
+}
+
+.experiment-container__hue-block--protan-blue-4 {
+    background-color: rgb(72, 72, 237);
+  
+}
+
+.experiment-container__hue-block--protan-blue-5  {
+    background-color: rgb(80, 80, 240);
+  
+}
+
+
+
+.experiment-container__hue-block--deutan-bluish-green-1  {
+    background-color:rgb(51, 118, 118);
+ }
+
+ .experiment-container__hue-block--deutan-bluish-green-2  {
+    background-color:rgb(59, 124, 124);
+ }
+
+ .experiment-container__hue-block--deutan-bluish-green-3  {
+    background-color:rgb(67, 131, 131);
+ }
+
+
+ .experiment-container__hue-block--deutan-bluish-green-4  {
+    background-color:rgb(75, 137, 137);
+ }
+
+ .experiment-container__hue-block--deutan-bluish-green-5 {
+    background-color:rgb(82, 143, 143);
+ }
+
+
+ .experiment-container__hue-block--deutan-grey-1   {
+    background-color: rgb(102, 109, 116);
+} 
+
+ .experiment-container__hue-block--deutan-grey-2   {
+    background-color: rgb(108, 115, 122);
+} 
+ .experiment-container__hue-block--deutan-grey-3   {
+    background-color: rgb(114, 121, 128);
+} 
+.experiment-container__hue-block--deutan-grey-4   {
+    background-color: rgb(121, 128, 135);
+} 
+
+.experiment-container__hue-block--deutan-grey-5   {
+    background-color: rgb(127, 134,141);
+} 
+
+
+.experiment-container__hue-block--deutan-blue-1  {
+    background-color: rgb(0, 115, 215);
+ }
+ .experiment-container__hue-block--deutan-blue-2  {
+    background-color: rgb(0, 119, 221);
+ }
+ .experiment-container__hue-block--deutan-blue-3  {
+    background-color: rgb(8, 125, 227);
+ }
+ .experiment-container__hue-block--deutan-blue-4  {
+    background-color: rgb(35, 131, 233);
+ }
+
+ .experiment-container__hue-block--deutan-blue-5  {
+    background-color: rgb(51, 139, 239);
+ }
+
+
+ 
+ .experiment-container__hue-block--deutan-purple-1 {
+    background-color: rgb(157, 59, 232);
+ }
+
+  
+ .experiment-container__hue-block--deutan-purple-2 {
+    background-color: rgb(163, 69, 237);
+ }
+
+ 
+ .experiment-container__hue-block--deutan-purple-3 {
+    background-color: rgb(169, 79, 243);
+ }
+ 
+ .experiment-container__hue-block--deutan-purple-4 {
+    background-color: rgb(173, 87, 248);
+ }
+
+
+ .experiment-container__hue-block--deutan-purple-5 {
+    background-color: rgb(180, 95, 254)
+ }
+
+ .experiment-container__hue-block--deutan-red-1  {
+    background-color: rgb(133, 14, 14);
+}
+.experiment-container__hue-block--deutan-red-2  {
+    background-color: rgb(140, 25, 25);
+}
+.experiment-container__hue-block--deutan-red-3  {
+    background-color: rgb(147, 35, 35);
+}
+
+.experiment-container__hue-block--deutan-red-4  {
+    background-color: rgb(153, 42, 42);
+}
+.experiment-container__hue-block--deutan-red-5  {
+    background-color: rgb(160, 49, 49);
+}
+
+.experiment-container__hue-block--deutan-brown-1 {
+    background-color: rgb(108, 49, 0);
+ }
+ .experiment-container__hue-block--deutan-brown-2 {
+    background-color: rgb(115, 55, 7);
+ }
+ .experiment-container__hue-block--deutan-brown-3 {
+    background-color: rgb(121, 60, 20);
+ }
+ .experiment-container__hue-block--deutan-brown-4 {
+    background-color: rgb(127, 67, 30);
+ }
+ .experiment-container__hue-block--deutan-brown-5 {
+    background-color: rgb(134, 72, 39);
+ }
+
+
+ 
+.experiment-container__hue-block--tritan-yellow-1  {
+
+    background-color: rgb(208, 208, 0);
+
+}
+
+.experiment-container__hue-block--tritan-yellow-2  {
+
+    background-color: rgb(215, 215, 0);
+
+}
+.experiment-container__hue-block--tritan-yellow-3  {
+
+    background-color: rgb(222, 222, 0);
+
+}
+
+.experiment-container__hue-block--tritan-yellow-4  {
+
+    background-color: rgb(229, 229, 12);
+
+}
+
+.experiment-container__hue-block--tritan-yellow-5  {
+
+    background-color: rgb(237, 237, 41);
+
+}
+
+.experiment-container__hue-block--tritan-tan-1  {
+
+    background-color: rgb(221, 198, 170);
+
+}
+.experiment-container__hue-block--tritan-tan-2  {
+
+    background-color: rgb(228, 205, 177);
+
+}
+
+
+.experiment-container__hue-block--tritan-tan-3  {
+
+    background-color: rgb(235, 212, 184);
+
+}
+.experiment-container__hue-block--tritan-tan-4 {
+
+    background-color: rgb(242, 219, 191);
+
+}
+
+.experiment-container__hue-block--tritan-tan-5  {
+
+    background-color:rgb(249, 226, 198);
+}
+
+ 
+.experiment-container__hue-block--tritan-blue-1  {
+
+    background-color: rgb(44, 44, 232);
+
+}
+
+.experiment-container__hue-block--tritan-blue-2  {
+
+    background-color: rgb(55, 55, 232);
+
+}
+.experiment-container__hue-block--tritan-blue-3  {
+
+    background-color: rgb(65, 65, 234);
+
+}
+.experiment-container__hue-block--tritan-blue-4  {
+
+    background-color: rgb(73, 73, 237);
+
+}
+.experiment-container__hue-block--tritan-blue-5  {
+
+    background-color: rgb(81, 81, 241);
+
+}
+
+.experiment-container__hue-block--tritan-green-1  {
+
+    background-color: rgb(0, 96, 0);
+
+}
+.experiment-container__hue-block--tritan-green-2  {
+
+    background-color: rgb(0, 102, 0);
+
+}
+  .experiment-container__hue-block--tritan-green-3  {
+
+    background-color: rgb(0, 109, 0);
+
+}
+.experiment-container__hue-block--tritan-green-4  {
+
+    background-color: rgb(16, 115, 16);
+
+}
+
+.experiment-container__hue-block--tritan-green-5  {
+
+    background-color: rgb(29, 121, 29);
+
+}
+.experiment-container__hue-block--tritan-pink-1  {
+
+    background-color: rgb(246, 45, 246);
+
+}   
+.experiment-container__hue-block--tritan-pink-2  {
+
+    background-color: rgb(252, 59, 252);
+
+} 
+.experiment-container__hue-block--tritan-pink-3  {
+
+    background-color: rgb(255, 71, 255);
+
+} 
+.experiment-container__hue-block--tritan-pink-4  {
+
+    background-color: rgb(255, 82, 255) ; 
+
+} 
+.experiment-container__hue-block--tritan-pink-5  {
+
+    background-color: rgb(255, 92, 255);
+
+} 
+
+
+ 
+.experiment-container__hue-block--tritan-orange-1  {
+
+    background-color: rgb(221, 118, 0)
+
+}  
+.experiment-container__hue-block--tritan-orange-2  {
+
+    background-color: rgb(228, 125, 0)
+}  
+.experiment-container__hue-block--tritan-orange-3  {
+
+    background-color: rgb(236, 131, 19)
+}  
+.experiment-container__hue-block--tritan-orange-4  {
+
+    background-color: rgb(244, 138, 38)
+}  
+.experiment-container__hue-block--tritan-orange-5  {
+
+    background-color: rgb(251, 144, 51)
+
+}  
+
+.experiment-container__hue-block--black  {
+
+    background-color: rgb(0, 0, 0);
+
+
+}  
+.experiment-container__hue-block--grey-1  {
+
+    background-color: rgb(30, 30, 30);
+
+
+} 
+.experiment-container__hue-block--grey-2  {
+
+    background-color: rgb(53, 53, 53);
+
+
+} 
+.experiment-container__hue-block--grey-3 {
+
+    background-color: rgb(78, 78, 78);
+
+
+} 
+.experiment-container__hue-block--grey-4 {
+
+    background-color: rgb(105, 105, 105);
+
+
+} 
+
+.experiment-container__hue-block--grey-5 {
+
+    background-color: rgb(133, 133, 133);
+
+
+} 
+
+.experiment-container__hue-block--grey-6  {
+
+    background-color: rgb(162, 162, 162);
+
+
+} 
+
+.experiment-container__hue-block--grey-7  {
+
+    background-color: rgb(162, 162, 162);
+
+
+} 
+.experiment-container__hue-block--grey-7  {
+
+    background-color: rgb(192, 192, 192);
+
+
+} 
+
+.experiment-container__hue-block--grey-8  {
+
+    background-color: rgb(223, 223, 223);
+
+
+} 
+.experiment-container__hue-block--white  {
+
+    background-color: rgb(255, 255, 255);
+
+
+} 
+
+ 
+.colour-iconizer--red{
+    background-color: rgb(224,81,65);
+}
+
+
+.colour-iconizer--orange{
+    background-color: rgb(240,155,56);
+}
+
+.colour-iconizer--yellow{
+    background-color: rgb(252, 233, 96);
+}
+
+.colour-iconizer--green  {
+    background-color: #67AC5B;
+}
+.hide-white-bg{
+    mix-blend-mode: multiply;
+  }
+
+ 
+.symbol-container--green {
+    background-color: #75FA4D;
+}
+
+.symbol-container--lime {
+    background-color: rgb(201,217,70);
+}
+.symbol-container--purple {
+    background-color: rgb(139, 34, 173);
+
+}
+.symbol-container--grey {
+
+  color: rgb(211, 206, 206);
+}
+.symbol-container--dark-bluish-green {
+
+    background-color: rgb(77, 170, 157);
+
+}
+.colour-iconizer--dark-bluish-green  {
+    background-color: #429388;
+    
+}
+
+.colour-iconizer--blue{
+
+    background-color: #4894EB;
+
+} .symbol-container--blue{
+    background-color:  #4895EC;
+    
+}
+
+.colour-iconizer--purple{
+    background-color: #612694;
+}
+
+.colour-iconizer--pink{
+    background-color: #EFBECF ;
+}
+
+.colour-iconizer--brown, .symbol-container--brown-1{
+
+    background-color: #3B2824;
+
+}
+
+.colour-iconizer--gray{
+
+    background-color:  #E0E0E0;
+}
+
+h3{
+   margin: 0 auto; 
+   text-align: center;
+   background-color: rgb(53, 52, 52);
+   color: white;
+   font-size: 1.5rem;
+   padding: 0.5rem;
+   font-weight: 600;
+
+
+}
+
+.colour-iconizer--border, .symbol--border{
+     border: 1px solid black;
+     margin: 0 auto;
+
+
+}
+
+.symbol--border, .highlight-under-block{
+    height: fit-content;
+    display: block;
+    width: 106px;
+    height: 106px;
+    position: relative;
+}
+
+.outline{
+    outline: 20px solid black; 
+    margin: 0 20px 0 0 ;
+
+}
+
+.symbol--border{
+  
+        border: 3px solid black;
+}
+.highlight-under-block{
+
+    background-color: black;
+}
+h4{
+    padding: 0.5rem;
+    font-weight: 600;
+    font-size: 1.4rem;
+    text-align: center;
+    background-color: rgb(61, 59, 59);
+    color: white;
+    margin-top: 0.5rem;
+    border-radius: 5px;
+
+    width: calc(100% - 300px);
+    min-width: 300px;
+    margin: 0.5rem auto;
+}
+
+h5{
+    font-size: 1.25rem;
+    font-style: italic;
+    font-weight: 800;
+    padding: 0.5rem;
+
+
+}
+
+h4.experiment-container__hue-block{
+    font-size: 1.1rem;
+    font-style: italic;
+    padding: 1rem;
+    text-align: center;
+
+}
+
+
+ul{   
+    padding: 0.5rem; 
+    min-width: 500px;
+    margin: 0 auto
+
+
+}
+li{
+
+    padding: 0.5rem;
+
+}
+
+ .experiment-container__faq-description {
+  display: block;
+  width: 95%;  
+  margin: 0 auto 30px auto;
+}
+
+.experiment-container__description{
+    margin-top: calc(50% - 1rem);
+}
+.bold{
+    font-weight: 900;
+}
+
+figcaption{
+    background-color: white;
+    line-height: 26px;
+    text-align: center;
+
+}
+
+.symbol-container--red{
+    background-color: #EA3223;
+    
+
+}
+.symbol-container--orange-shade-1{
+    background-color: rgb(255, 65, 0);
+
+}
+
+.symbol-container--orange-shade-2{
+    background-color: rgb(255, 96, 0) ;
+
+}
+
+.symbol-container--orange-shade-3{
+    background-color: rgb(255, 123, 0) ;
+
+}
+.symbol-container--orange-shade-4{
+    background-color: rgb(255, 147, 0);
+
+}
+.symbol-container--orange-shade-5{
+    background-color: rgb(255, 170, 0);
+
+}
+
+.symbol-container--orange-shade-6{
+    background-color: rgb(255, 192, 0);
+
+}
+
+.symbol-container--orange-shade-7{
+    background-color: rgb(255, 214, 0);
+
+}
+
+.symbol-container--orange-shade-8{
+    background-color: rgb(255, 235, 0);
+
+}
+
+.symbol-container--yellow{
+    background-color: #FCEA60;
+
+}
+
+
+.experiment-container__hue-block-transition--protan-grey-pink-10  {
+
+    background-color: rgb(118, 118, 118)
+
+}  
+
+.experiment-container__hue-block-transition--protan-grey-pink-9  {
+
+    background-color: rgb(131, 114, 116)
+
+}  
+.experiment-container__hue-block-transition--protan-grey-pink-8  {
+
+    background-color: rgb(143, 110, 114)
+}  
+.experiment-container__hue-block-transition--protan-grey-pink-7  {
+
+    background-color: rgb(157, 104, 111)
+}  
+.experiment-container__hue-block-transition--protan-grey-pink-6  {
+
+    background-color: rgb(170, 97, 108)
+}  
+.experiment-container__hue-block-transition--protan-grey-pink-5  {
+
+    background-color: rgb(181, 91, 105)
+}  
+.experiment-container__hue-block-transition--protan-grey-pink-4  {
+
+    background-color: rgb(190, 85, 102)
+}  
+
+.experiment-container__hue-block-transition--protan-grey-pink-3  {
+
+    background-color: rgb(197, 79, 100)
+}  
+
+.experiment-container__hue-block-transition--protan-grey-pink-2  {
+
+    background-color: rgb(203, 74, 98)
+}  
+
+
+.experiment-container__hue-block-transition--protan-grey-pink-1  {
+
+    background-color: rgb(210, 67, 96)
+}  
+
+
+.experiment-container__hue-block-transition--protan-grey-dark-bluish-green-10  {
+
+    background-color: rgb(118, 118, 118);
+
+}  
+
+.experiment-container__hue-block-transition--protan-grey-dark-bluish-green-9  {
+
+    background-color: rgb(113, 120, 119);
+
+}  
+.experiment-container__hue-block-transition--protan-grey-dark-bluish-green-8  {
+
+    background-color: rgb(108, 121, 120);
+
+}  
+.experiment-container__hue-block-transition--protan-grey-dark-bluish-green-7  {
+
+    background-color: rgb(103, 122, 120);
+
+}  
+.experiment-container__hue-block-transition--protan-grey-dark-bluish-green-6  {
+
+    background-color: rgb(99, 123, 120);
+
+}  
+
+.experiment-container__hue-block-transition--protan-grey-dark-bluish-green-5  {
+
+    background-color: rgb(94, 123, 121);
+
+}
+
+.experiment-container__hue-block-transition--protan-grey-dark-bluish-green-4  {
+
+    background-color: rgb(90, 125, 122);
+
+}
+
+.experiment-container__hue-block-transition--protan-grey-dark-bluish-green-3  {
+
+    background-color: rgb(84, 126, 122);
+
+}
+
+.experiment-container__hue-block-transition--protan-grey-dark-bluish-green-2  {
+
+    background-color: rgb(79, 127, 123);
+
+}
+
+.experiment-container__hue-block-transition--protan-grey-dark-bluish-green-1  {
+
+    background-color: rgb(74, 127, 123);
+
+}
+
+
+.experiment-container__hue-block-transition--protan-blue-purple-1  {
+
+    background-color: rgb(63, 63, 234);
+
+}
+.experiment-container__hue-block-transition--protan-blue-purple-2  {
+
+    background-color: rgb(78, 59, 232);
+
+}
+.experiment-container__hue-block-transition--protan-blue-purple-3  {
+
+    background-color: rgb(89, 55, 230);
+
+}
+.experiment-container__hue-block-transition--protan-blue-purple-4  {
+
+    background-color: rgb(99, 50, 228);
+
+}
+.experiment-container__hue-block-transition--protan-blue-purple-5  {
+
+    background-color: rgb(108, 45, 226);
+
+}
+.experiment-container__hue-block-transition--protan-blue-purple-6  {
+
+    background-color: rgb(116, 40, 224);
+
+}
+.experiment-container__hue-block-transition--protan-blue-purple-7  {
+
+    background-color: rgb(123, 34, 223);
+
+}
+.experiment-container__hue-block-transition--protan-blue-purple-8  {
+
+    background-color: rgb(129, 26, 221);
+
+}
+.experiment-container__hue-block-transition--protan-blue-purple-9  {
+
+    background-color: rgb(135, 16, 219); 
+
+}
+.experiment-container__hue-block-transition--protan-blue-purple-10  {
+
+    background-color: rgb(141, 0, 217);
+
+}
+
+
+
+.experiment-container__hue-block-transition--protan-red-brown-1  {
+
+    background-color: rgb(147, 34, 34);
+
+}
+.experiment-container__hue-block-transition--protan-red-brown-2  {
+
+    background-color: rgb(144, 38, 33);
+
+}
+
+.experiment-container__hue-block-transition--protan-red-brown-3  {
+
+    background-color: rgb(142, 42, 31);
+
+}
+.experiment-container__hue-block-transition--protan-red-brown-4  {
+
+    background-color: rgb(139, 45, 30);
+
+}
+
+.experiment-container__hue-block-transition--protan-red-brown-5  {
+
+    background-color: rgb(136, 48, 28);
+
+}
+.experiment-container__hue-block-transition--protan-red-brown-6  {
+
+    background-color: rgb(133, 51, 27);
+
+}
+
+.experiment-container__hue-block-transition--protan-red-brown-7  {
+
+    background-color: rgb(130, 53, 25);
+
+}
+.experiment-container__hue-block-transition--protan-red-brown-8  {
+
+    background-color: rgb(127, 56, 24);
+
+}
+.experiment-container__hue-block-transition--protan-red-brown-9  {
+
+    background-color: rgb(124, 58, 22);
+
+}
+.experiment-container__hue-block-transition--protan-red-brown-10  {
+
+    background-color: rgb(121, 60, 20);
+
+}
+
+.experiment-container__hue-block-transition--protan-orange-green-1  {
+
+    background-color: rgb(246, 165, 51);
+
+}
+
+.experiment-container__hue-block-transition--protan-orange-green-2  {
+
+    background-color: rgb(234, 170, 55)
+
+}
+.experiment-container__hue-block-transition--protan-orange-green-3  {
+
+    background-color: rgb(222, 176, 58)
+
+}
+
+.experiment-container__hue-block-transition--protan-orange-green-4  {
+
+    background-color: rgb(209, 181, 62);
+
+}
+
+.experiment-container__hue-block-transition--protan-orange-green-5  {
+
+    background-color: rgb(195, 185, 65);
+
+}
+
+.experiment-container__hue-block-transition--protan-orange-green-6  {
+
+    background-color: rgb(179, 190, 68)
+
+}
+
+.experiment-container__hue-block-transition--protan-orange-green-7  {
+
+    background-color: rgb(161, 194, 70);
+
+}
+
+.experiment-container__hue-block-transition--protan-orange-green-8  {
+
+    background-color: rgb(140, 199, 73);
+
+}
+
+.experiment-container__hue-block-transition--protan-orange-green-9  {
+
+    background-color: rgb(114, 203, 76);
+
+}
+
+.experiment-container__hue-block-transition--protan-orange-green-10  {
+
+    background-color: rgb(78, 207, 78);
+
+}
+
+
+.experiment-container__hue-block-transition--deutan-grey-pink-10  {
+
+    background-color: rgb(118, 118, 118);
+
+} 
+
+.experiment-container__hue-block-transition--deutan-grey-pink-9  {
+
+    background-color: rgb(127, 115, 119);
+
+} 
+.experiment-container__hue-block-transition--deutan-grey-pink-8  {
+
+    background-color: rgb(136, 112, 120);
+
+} 
+
+.experiment-container__hue-block-transition--deutan-grey-pink-7  {
+
+    background-color: rgb(145, 108, 121);
+
+} 
+.experiment-container__hue-block-transition--deutan-grey-pink-6  {
+
+    background-color: rgb(154, 104, 122);
+
+} 
+
+.experiment-container__hue-block-transition--deutan-grey-pink-5  {
+
+    background-color: rgb(164, 99, 124);
+
+} 
+.experiment-container__hue-block-transition--deutan-grey-pink-4  {
+
+    background-color: rgb(172, 94, 125);
+
+} 
+.experiment-container__hue-block-transition--deutan-grey-pink-3  {
+
+    background-color: rgb(179, 89, 126);
+
+} 
+
+.experiment-container__hue-block-transition--deutan-grey-pink-2  {
+
+    background-color: rgb(186, 84, 127);
+
+}
+
+.experiment-container__hue-block-transition--deutan-grey-pink-1  {
+
+    background-color: rgb(193, 78, 128);
+
+}
+
+.experiment-container__hue-block-transition--deutan-grey-bluish-green-10   {
+
+    background-color: rgb(118, 118, 118)
+
+}
+
+.experiment-container__hue-block-transition--deutan-grey-bluish-green-9  {
+
+    background-color: rgb(113, 120, 119)
+
+}
+
+.experiment-container__hue-block-transition--deutan-grey-bluish-green-8   {
+
+    background-color: rgb(108, 121, 120)
+
+}
+
+.experiment-container__hue-block-transition--deutan-grey-bluish-green-7   {
+
+    background-color: rgb(103, 122, 120)
+
+}
+
+.experiment-container__hue-block-transition--deutan-grey-bluish-green-6   {
+
+    background-color: rgb(99, 123, 121);
+
+}
+
+.experiment-container__hue-block-transition--deutan-grey-bluish-green-5   {
+
+    background-color: rgb(94, 124, 121);
+
+}
+
+.experiment-container__hue-block-transition--deutan-grey-bluish-green-4   {
+
+    background-color: rgb(90, 125, 122);
+
+}
+
+.experiment-container__hue-block-transition--deutan-grey-bluish-green-3   {
+
+    background-color: rgb(84, 126, 122);
+
+}
+
+.experiment-container__hue-block-transition--deutan-grey-bluish-green-2   {
+
+    background-color: rgb(79, 127, 123);
+
+}
+
+.experiment-container__hue-block-transition--deutan-grey-bluish-green-1   {
+
+    background-color: rgb(74, 127, 123)
+
+}
+
+
+.experiment-container__hue-block-transition--deutan-dodgerBlue-purple-1   {
+
+    background-color: rgb(8, 125, 227)
+}
+.experiment-container__hue-block-transition--deutan-dodgerBlue-purple-2   {
+
+    background-color: rgb(59, 121, 229)
+
+}
+.experiment-container__hue-block-transition--deutan-dodgerBlue-purple-3   {
+
+    background-color: rgb(82, 117, 230)
+
+}
+
+.experiment-container__hue-block-transition--deutan-dodgerBlue-purple-4   {
+
+    background-color: rgb(100, 113, 232)
+
+}
+.experiment-container__hue-block-transition--deutan-dodgerBlue-purple-5   {
+
+    background-color: rgb(114, 108, 234)
+
+}
+.experiment-container__hue-block-transition--deutan-dodgerBlue-purple-6   {
+
+    background-color:rgb(127, 104, 236)
+
+}
+.experiment-container__hue-block-transition--deutan-dodgerBlue-purple-7   {
+
+    background-color: rgb(139, 98, 238)
+
+}
+.experiment-container__hue-block-transition--deutan-dodgerBlue-purple-8   {
+
+    background-color: rgb(150, 93, 239)
+
+}
+.experiment-container__hue-block-transition--deutan-dodgerBlue-purple-9   {
+
+    background-color: rgb(160, 86, 241)
+
+}
+
+.experiment-container__hue-block-transition--deutan-dodgerBlue-purple-10   {
+
+    background-color: rgb(169, 79, 243)
+
+}
+
+
+.experiment-container__hue-block-transition--deutan-orange-red-1   {
+
+    background-color: rgb(225, 124, 0);
+}
+.experiment-container__hue-block-transition--deutan-orange-red-2   {
+
+    background-color: rgb(229, 119, 17);
+}
+.experiment-container__hue-block-transition--deutan-orange-red-3   {
+
+    background-color: rgb(232, 113, 28);
+}
+.experiment-container__hue-block-transition--deutan-orange-red-4   {
+
+    background-color: rgb(236, 108, 35);
+}
+.experiment-container__hue-block-transition--deutan-orange-red-5   {
+
+    background-color: rgb(239, 102, 42);
+}
+.experiment-container__hue-block-transition--deutan-orange-red-6   {
+
+    background-color: rgb(243, 95, 47);
+}
+.experiment-container__hue-block-transition--deutan-orange-red-7  {
+
+    background-color: rgb(246, 88, 51);
+}
+.experiment-container__hue-block-transition--deutan-orange-red-8   {
+
+    background-color: rgb(249, 81, 56);
+}
+.experiment-container__hue-block-transition--deutan-orange-red-9   {
+
+    background-color: rgb(252, 73, 59);  
+}
+.experiment-container__hue-block-transition--deutan-orange-red-10      {
+
+    background-color: rgb(255, 63, 63);
+}
+
+
+.experiment-container__hue-block-transition--deutan-yellow-green-1       {
+
+    background-color: rgb(253, 217, 71);
+}
+.experiment-container__hue-block-transition--deutan-yellow-green-2       {
+
+    background-color: rgb(240, 221, 70) ;
+}
+.experiment-container__hue-block-transition--deutan-yellow-green-3       {
+
+    background-color: rgb(227, 226, 68) ;
+}
+.experiment-container__hue-block-transition--deutan-yellow-green-4       {
+
+    background-color: rgb(213, 230, 67);
+}
+.experiment-container__hue-block-transition--deutan-yellow-green-5       {
+
+    background-color: rgb(197, 234, 66);
+}
+.experiment-container__hue-block-transition--deutan-yellow-green-6       {
+
+    background-color: rgb(180, 238, 64);
+}
+.experiment-container__hue-block-transition--deutan-yellow-green-7       {
+
+    background-color: rgb(160, 241, 63);
+}
+.experiment-container__hue-block-transition--deutan-yellow-green-8       {
+
+    background-color: rgb(136, 245, 61);
+}
+.experiment-container__hue-block-transition--deutan-yellow-green-9       {
+
+    background-color: rgb(106, 249, 60);
+}
+.experiment-container__hue-block-transition--deutan-yellow-green-10       {
+
+    background-color: rgb(106, 249, 60);
+}
+
+
+.experiment-container__hue-block-transition--tritan-grey-purple-10       {
+
+    background-color: rgb(118, 118, 118);
+}
+.experiment-container__hue-block-transition--tritan-grey-purple-9       {
+
+    background-color: rgb(123, 114, 142)    ;
+}
+
+.experiment-container__hue-block-transition--tritan-grey-purple-8       {
+
+    background-color: rgb(124, 112, 151);
+}
+
+.experiment-container__hue-block-transition--tritan-grey-purple-7      {
+
+    background-color: rgb(126, 110, 160)
+}
+
+.experiment-container__hue-block-transition--tritan-grey-purple-6       {
+
+    background-color: rgb(127, 109, 168)
+}
+
+.experiment-container__hue-block-transition--tritan-grey-purple-5       {
+
+    background-color: rgb(127, 109, 168);
+}
+
+.experiment-container__hue-block-transition--tritan-grey-purple-4       {
+
+    background-color: rgb(130, 106, 177);
+}
+
+.experiment-container__hue-block-transition--tritan-grey-purple-3      {
+
+    background-color: rgb(131, 104, 184)    ;
+}
+
+.experiment-container__hue-block-transition--tritan-grey-purple-2       {
+
+    background-color: rgb(133, 102, 192);
+}
+
+.experiment-container__hue-block-transition--tritan-grey-purple-1      {
+
+    background-color: rgb(135, 99, 199);
+}
+
+.experiment-container__hue-block-transition--tritan-grey-yellow-10         {
+
+    background-color: rgb(118, 118, 118);
+}
+.experiment-container__hue-block-transition--tritan-grey-yellow-9        {
+
+    background-color: rgb(117, 119, 114);
+}
+.experiment-container__hue-block-transition--tritan-grey-yellow-8         {
+
+    background-color: rgb(117, 119, 109);
+}
+.experiment-container__hue-block-transition--tritan-grey-yellow-7         {
+
+    background-color: rgb(116, 120, 104);
+}
+
+.experiment-container__hue-block-transition--tritan-grey-yellow-6         {
+
+    background-color: rgb(115, 121, 99);
+}
+
+.experiment-container__hue-block-transition--tritan-grey-yellow-5         {
+
+    background-color: rgb(114, 121, 94);
+}
+
+.experiment-container__hue-block-transition--tritan-grey-yellow-4         {
+
+    background-color: rgb(114, 122, 90);
+}
+
+.experiment-container__hue-block-transition--tritan-grey-yellow-3         {
+
+    background-color: rgb(113, 122, 85);
+}
+
+.experiment-container__hue-block-transition--tritan-grey-yellow-2         {
+
+    background-color: rgb(114, 123, 81);
+}
+
+.experiment-container__hue-block-transition--tritan-grey-yellow-1         {
+
+    background-color: rgb(113, 123, 75);
+}
+
+
+
+.experiment-container__hue-block-transition--tritan-purple-yellow-1         {
+
+    background-color: rgb(214, 138, 255);
+}
+
+.experiment-container__hue-block-transition--tritan-purple-yellow-2         {
+
+    background-color: rgb(209, 145, 237);
+}
+.experiment-container__hue-block-transition--tritan-purple-yellow-3         {
+
+    background-color: rgb(205, 152, 219);
+}
+.experiment-container__hue-block-transition--tritan-purple-yellow-4         {
+
+    background-color: rgb(201, 157, 201);
+}
+.experiment-container__hue-block-transition--tritan-purple-yellow-5         {
+
+    background-color: rgb(197, 162, 182) ;
+}
+.experiment-container__hue-block-transition--tritan-purple-yellow-6         {
+
+    background-color: rgb(193, 167, 162);
+}
+.experiment-container__hue-block-transition--tritan-purple-yellow-7         {
+
+    background-color: rgb(190, 171, 140);
+}
+.experiment-container__hue-block-transition--tritan-purple-yellow-8         {
+
+    background-color: rgb(187, 174, 114);
+}
+.experiment-container__hue-block-transition--tritan-purple-yellow-9         {
+
+    background-color: rgb(184, 178, 81);
+}
+.experiment-container__hue-block-transition--tritan-purple-yellow-10         {
+
+    background-color: rgb(181, 181, 0);
+}
+
+
+.experiment-container__hue-block-transition--tritan-green-bluish-green-1         {
+
+    background-color: rgb(68, 255, 68);
+}
+.experiment-container__hue-block-transition--tritan-green-bluish-green-2         {
+
+    background-color: rgb(70, 254, 104);
+}
+
+.experiment-container__hue-block-transition--tritan-green-bluish-green-3         {
+
+    background-color: rgb(70, 254, 130);
+}
+
+.experiment-container__hue-block-transition--tritan-green-bluish-green-4         {
+
+    background-color: rgb(74, 253, 151);
+}
+
+.experiment-container__hue-block-transition--tritan-green-bluish-green-5         {
+
+    background-color: rgb(76, 252, 170);
+}
+
+.experiment-container__hue-block-transition--tritan-green-bluish-green-6         {
+
+    background-color: rgb(78, 251, 187);
+}
+
+.experiment-container__hue-block-transition--tritan-green-bluish-green-7         {
+
+    background-color: rgb(80, 250, 203);
+}
+
+.experiment-container__hue-block-transition--tritan-green-bluish-green-8         {
+
+    background-color: rgb(82, 249, 218);
+}
+
+.experiment-container__hue-block-transition--tritan-green-bluish-green-9         {
+
+    background-color: rgb(84, 248, 233);
+}
+
+.experiment-container__hue-block-transition--tritan-green-bluish-green-10         {
+
+    background-color: rgb(86, 247, 247);
+}
+
+.experiment-container__hue-block-transition--tritan-darkRed-orange-1         {
+
+    background-color: rgb(192, 80, 80);
+}
+
+.experiment-container__hue-block-transition--tritan-darkRed-orange-2         {
+
+    background-color:rgb(192, 81, 75);
+}
+.experiment-container__hue-block-transition--tritan-darkRed-orange-3         {
+
+    background-color: rgb(191, 82, 70);
+}
+.experiment-container__hue-block-transition--tritan-darkRed-orange-4         {
+
+    background-color: rgb(191, 83, 65);
+}
+.experiment-container__hue-block-transition--tritan-darkRed-orange-5         {
+
+    background-color: rgb(190, 84, 59);
+}
+.experiment-container__hue-block-transition--tritan-darkRed-orange-6        {
+
+    background-color: rgb(190, 85, 52);
+}
+.experiment-container__hue-block-transition--tritan-darkRed-orange-7         {
+
+    background-color: rgb(189, 86, 44);
+}
+.experiment-container__hue-block-transition--tritan-darkRed-orange-8         {
+
+    background-color: rgb(189, 86, 35);
+}
+.experiment-container__hue-block-transition--tritan-darkRed-orange-9         {
+
+    background-color: rgb(188, 87, 23);
+}
+.experiment-container__hue-block-transition--tritan-darkRed-orange-10         {
+
+    background-color: rgb(188, 88, 0);
+}
+
+.scale-first{
+  
+    transform: scale(1)  
+}
+.scale-second{
+  
+    transform: scale(0.95)  
+}
+
+.scale-third{
+  
+    transform: scale(0.9)  
+}
+
+.scale-fourth{
+  
+    transform: scale(0.85)  
+}
+
+.scale-fifth{
+  
+    transform: scale(0.8)  
+}
+
+.scale-sixth{
+  
+    transform: scale(0.75)  
+}
+.scale-7th{
+  
+    transform: scale(0.70)  
+}
+
+.scale-8th{
+  
+    transform: scale(0.65)  
+}
+.scale-9th{
+  
+    transform: scale(0.60)  
+}
+.scale-tenth{
+  
+    transform: scale(0.55)  
+}
+
+
+
+.colour-mix--opacity-1   {
+ 
+    opacity: 1;
+}
+
+.colour-mix--opacity-2 {
+ 
+    opacity: 0.93;
+}
+
+.colour-mix--opacity-3   {
+ 
+    opacity: 0.86;
+}
+
+.colour-mix--opacity-4   {
+ 
+    opacity: 0.79;
+}
+
+.colour-mix--opacity-5  {
+ 
+    opacity: 0.72;
+}
+
+.colour-mix--opacity-6   {
+ 
+    opacity: 0.66;
+}
+
+.colour-mix--opacity-7   {
+ 
+    opacity: 0.62;
+}
+
+.colour-mix--opacity-8   {
+ 
+    opacity: 0.58;
+}
+
+.colour-mix--opacity-9    {
+ 
+    opacity: 0.55;
+}
+.colour-mix--opacity-10  {
+ 
+    opacity: 0;
+}
+

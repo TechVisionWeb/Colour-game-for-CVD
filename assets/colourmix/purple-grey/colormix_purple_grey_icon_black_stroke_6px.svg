@@ -1,0 +1,36 @@
+<svg  xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='none'
+  viewBox='0 0 200 200' width="200" height="200">
+
+  <svg viewBox='-42.8571 -42.8571 285.71428 285.71428'  height="200" width="200">
+
+    <circle cx="100" cy="100" r="97" stroke="black" stroke-width="6" fill="none" vector-effect="non-scaling-stroke" />
+  </svg>
+  <svg   height="200" width="200">
+
+    <rect width="200" height="100"
+      style="fill:rgb(255,255,255);stroke-width:6;stroke:rgb(255,255,255)" vector-effect="non-scaling-stroke"/>
+  </svg>
+
+
+  <svg viewBox='-42.8571 -42.8571 285.71428 285.71428'  height="200" width="200">
+
+    <line x1='100' y1='0' x2='100' y2='200' stroke='black' stroke-width='6' vector-effect="non-scaling-stroke"/>
+  </svg>
+
+  <svg viewBox='-42.8571 -42.8571 285.71428 285.71428'  height="200" width="200">
+
+    <line x1='50' y1='60' x2=' 150' y2='60' stroke='black' stroke-width='6' vector-effect="non-scaling-stroke"/>
+  </svg>
+
+  <svg xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='none' viewBox='-21.42857143
+-21.42857143
+142.8571429
+142.8571429
+' width="200" height="200">
+  <line x1='0' y1='0' x2='100' y2='100' stroke='black' stroke-width='6'  vector-effect="non-scaling-stroke"/>
+  <line x1='0' y1='100' x2='100' y2='0' stroke='black' stroke-width='6' vector-effect="non-scaling-stroke"/>
+</svg>    
+
+
+</svg>    
+  

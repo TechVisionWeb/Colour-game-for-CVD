@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Colour Experiment</title>
+
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+  <link rel="stylesheet" href="css/reset.css">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"
+    integrity="sha256-6XMVI0zB8cRzfZjqKcD01PBsAy3FlDASrlC8SxCpInY=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <!-- Modal content -->
+  <div class="login-modal">
+
+    <div class="login-modal__content">
+      <form class="login-modal__form" action="javascript:void(0);">
+        <label for="partname">participant code: </label>
+        <select class="login-modal__select" name="partname" id="partname">
+          <option value="p1">p1</option>
+          <option value="p2">p2</option>
+          <option value="p3">p3</option>
+          <option value="p4">p4</option>
+          <option value="p5">p5</option>
+          <option value="p6">p6</option>
+          <option value="p7">p7</option>
+          <option value="p8">p8</option>
+          <option value="p9">p9</option>
+          <option value="p10">p10</option>
+          <option value="p11">p11</option>
+          <option value="p12">p12</option>
+
+        </select><br><br>
+
+
+        <label for="passname">password: </label>
+        <input type="password" id="passname" name="passname" placeholder="Enter password"><br><br>
+
+        <button type="submit" class="login-modal__login-btn">submit</button>
+
+      </form>
+
+
+
+    </div>
+  </div>
+  <div class="grid-container">
+    <!-- The Modal -->
+
+
+    <header class="header">
+      <h1>WELCOME TO THE COLOUR SORTING AND TRANSITION EXPERIMENT</h1>
+      <h2>Your participation is much appreciated</h2>
+      <div class="header__status">
+        <div class="header__mode">mode: </div>
+        <div class="header__code">code: </div>
+      </div>
+    </header>
+
+
+    <main class="main">
+
+
+
+      <section class="faq">
+        <h3>Important information for tasks</h3>
+
+        <h4> For all participants:</h4>
+        <ul>
+          <li>Attempt this experiment in a Chrome (colour blind simulated) or Edge - typical colour vision</li>
+          <li>Use the "Let's go color blind" add on if your participant code is between p1 and p6 - deuteranomaly, simulate and full strength</li>
+          <li>Make sure javascript is enabled. If you can move the blocks transition blocks below then you should be
+            fine</li>
+          <li>This FAQ section will disappear after the experiment starts.</li>
+          <li>Each task will time out after 30 minutes. If your time runs out, pressing continue until you go to the the next task to continue the experiment</li>
+          <li> Your last task is to download the results of the experiment. You will be see a results link. Download your results file and send it to:
+            nw002863@student.staffs.ac.uk
+          <li>Click continue for the next sub task of a sorting or transition task</li>
+          <li>Click next task when you are happy to proceed to the next task</li>
+        
+        </ul>
+
+        <h5> Transition task</h5>
+        <p class="experiment-container__faq-description">An example of the task is show below. For this task you must
+          drag the middle (2-9) blocks and place the blocks of colour in the correct gradient order. The middle (2-9)
+          blocks are
+          compared to the first and last blocks. The more a colour contains black, the closer its order placement is to
+          black. The more a colour contains white the closer in order placement it is to white. To drag in the
+          experiment, click the square,
+          and keep the mouse button pressed until placed in the desired space, then let go. You will be notified of the
+          time left above the
+          transition blocks.
+          I recommend you practice this action with the transition below. If there are problems with this action email
+          me.
+
+
+
+
+        <div id="draggable-trans-example" class="draggable-trans">
+
+
+          <div
+            class="symbol--border outline experiment-container__hue-block experiment-container__hue-block--small experiment-container__hue-block--black draggable-disabled">
+          </div>
+
+          <div
+            class=" symbol--border outline experiment-container__hue-block experiment-container__hue-block--small   experiment-container__hue-block--grey-1 ">
+          </div>
+
+          <div
+            class=" symbol--border outline  experiment-container__hue-block experiment-container__hue-block--small  experiment-container__hue-block--grey-2  ">
+          </div>
+
+          <div
+            class=" symbol--border  outline experiment-container__hue-block experiment-container__hue-block--small experiment-container__hue-block--grey-3   ">
+          </div>
+
+
+          <div
+            class=" symbol--border outline  experiment-container__hue-block experiment-container__hue-block--small experiment-container__hue-block--grey-4  ">
+          </div>
+
+
+          <div
+            class=" symbol--border outline  experiment-container__hue-block experiment-container__hue-block--small experiment-container__hue-block--grey-5  ">
+          </div>
+
+          <div
+            class=" symbol--border outline  experiment-container__hue-block experiment-container__hue-block--small experiment-container__hue-block--grey-6  ">
+          </div>
+
+          <div
+            class="  symbol--border  outline experiment-container__hue-block experiment-container__hue-block--small experiment-container__hue-block--grey-7  ">
+          </div>
+
+          <div
+            class="  symbol--border outline  experiment-container__hue-block experiment-container__hue-block--small experiment-container__hue-block--grey-8  ">
+          </div>
+
+
+          <div
+            class="  symbol--border  outline experiment-container__hue-block experiment-container__hue-block--small  experiment-container__hue-block--white draggable-disabled">
+          </div>
+        </div>
+
+
+        <h5> Sorting task</h5>
+        <p class="experiment-container__faq-description">A square block with the same dimensions as the transition block
+          ,is coloured a specific colour. This colour must be dragged and placed
+          into a square that is larger and labelled as the specific colour.
+          To drag during the experiment, click the square, and keep the mouse button pressed until placed
+          in the desired larger square, then let go. The smaller square should revert back to its original starting
+          position
+          and you will be notified of your chosen colour and time left just above the larger square blocks.
+        </p>
+        <a id="start-experiment-link" href="#start-experiment">Start the experiment</a>
+        <hr>
+        <h4>CVD individual-only information</h4>
+
+        <h5>Colour Iconizer for the sorting tasks</h5>
+
+        <p class="experiment-container__faq-description ">The label above tells you what colour the symbol represents.
+          The objects used are associated with that colour. These symbols will be present in an aided sorting task. They
+          will be used to identify what the colour of the hue square is, for example, a yellow square will have a star
+          symbol
+          underneath it.
+        </p>
+
+        <p class="experiment-container__faq-description ">Take your time to memorise what each symbol represents.</p>
+        <div class="symbol-containers">
+          <figure class="colour-iconizer-container ">
+
+            <figcaption>Red</figcaption>
+            <div style="background-color: red;"
+            class="symbol--border  experiment-container__hue-block experiment-container__hue-block--small experiment-container__hue-block--black draggable-disabled">
+          </div>
+            <img class="symbol--border  colour-iconizer   " alt="red stop sign" src="assets/ColourIconiser/redIcon.png">
+          </figure>
+          <figure class=" colour-iconizer-container ">
+            <figcaption>Orange</figcaption>
+            <div style="background-color: orange;"
+            class="symbol--border  experiment-container__hue-block experiment-container__hue-block--small experiment-container__hue-block--black draggable-disabled">
+          </div>
+            <img class=" symbol--border     colour-iconizer   " alt="orange fruit"
+              src="assets/ColourIconiser/orange.png">
+          </figure>
+          <figure class=" colour-iconizer-container ">
+            <figcaption>Yellow</figcaption>
+            <div style="background-color: yellow;"
+            class="symbol--border  experiment-container__hue-block experiment-container__hue-block--small experiment-container__hue-block--black draggable-disabled">
+          </div>
+            <img class=" symbol--border      colour-iconizer   " alt="yellow star" src="assets/ColourIconiser/star.png">
+          </figure>
+          <figure class=" colour-iconizer-container ">
+            <figcaption>Green</figcaption>
+            <div style="background-color: green;"
+            class="symbol--border  experiment-container__hue-block experiment-container__hue-block--small experiment-container__hue-block--black draggable-disabled">
+          </div>
+            
+            <img class=" symbol--border     colour-iconizer   " alt="green tree" src="assets/ColourIconiser/tree.png">
+          </figure>
+          <figure class=" colour-iconizer-container ">
+           
+            <figcaption>Bluish green </figcaption>
+            <div style="background-color: rgb(4, 126, 114)"
+            class="symbol--border  experiment-container__hue-block experiment-container__hue-block--small experiment-container__hue-block--black draggable-disabled">
+          </div>
+            <img class=" symbol--border      colour-iconizer   " alt="dark bluish green eggs"
+              src="assets/ColourIconiser/egg.svg">
+          </figure>
+
+        </div>
+        <div class="symbol-containers">
+          <figure class="colour-iconizer-container ">
+            <figcaption>Blue</figcaption>
+            <div style="background-color: blue;"
+            class="symbol--border  experiment-container__hue-block experiment-container__hue-block--small experiment-container__hue-block--black draggable-disabled">
+          </div>
+            <img class=" symbol--border  colour-iconizer    " alt="blue drop" src="assets/ColourIconiser/drop.svg">
+          </figure>
+          <figure class=" colour-iconizer-container ">
+            <figcaption>Purple</figcaption>
+            <div style="background-color: purple;"
+            class="symbol--border  experiment-container__hue-block experiment-container__hue-block--small experiment-container__hue-block--black draggable-disabled">
+          </div>
+            <img class=" symbol--border  colour-iconizer   " alt="purple grapes" src="assets/ColourIconiser/grapes.svg">
+          </figure>
+          <figure class=" colour-iconizer-container ">
+            <figcaption>Brown</figcaption>
+            <div style="background-color: #764700;"
+            class="symbol--border  experiment-container__hue-block experiment-container__hue-block--small experiment-container__hue-block--black draggable-disabled">
+          </div>
+            <img class="  symbol--border  colour-iconizer   " alt="brown poop" src="assets/ColourIconiser/poop.svg">
+          </figure>
+          <figure class=" colour-iconizer-container ">
+            <figcaption>Grey</figcaption>
+            <div style="background-color: grey;"
+            class="symbol--border  experiment-container__hue-block experiment-container__hue-block--small experiment-container__hue-block--black draggable-disabled">
+          </div>
+            <img class="  symbol--border  colour-iconizer  " alt="grey mountains"
+              src="assets/ColourIconiser/mountain.svg">
+          </figure>
+
+          <figure class=" colour-iconizer-container ">
+            <figcaption>Pink</figcaption>
+            <div style="background-color: pink;"
+            class="symbol--border  experiment-container__hue-block experiment-container__hue-block--small experiment-container__hue-block--black draggable-disabled">
+          </div>
+            <img class="  symbol--border  colour-iconizer  " alt="pink flamingo"
+              src="assets/ColourIconiser/flamingo.svg">
+          </figure>
+        </div>
+
+
+
+
+
+
+
+
+        <h5>Colour Mix for transition tasks</h5>
+
+        <p class="experiment-container__faq-description ">The label above tells you what colour the symbol represents.
+          The objects used are associated with that colour. These symbols will be present in the 3 aided transition
+          tasks. They
+          will be used to identify how much of a colour is contained in a square along a gradient. The transition blocks
+          will need to
+          be rearranged in the correct order just like in the unaided transition task. The difference is the coloured
+          square will have
+          a symbol underneath it. For example, a yellow square will have a lightning symbol underneath it.
+        </p>
+
+
+        <p class="experiment-container__faq-description ">Take your time to memorise what each symbol represents. There
+          are situations where pink can be
+          interpreted as a light red.
+        </p>
+
+
+        <div class="symbol-containers">
+          <figure class=" colour-iconizer-container ">
+
+            <figcaption>Red or Pink</figcaption>
+            <div style="background-color: red;"
+            class="symbol--border  experiment-container__hue-block experiment-container__hue-block--small experiment-container__hue-block--black draggable-disabled">
+          </div>
+            <div class="symbol--border"><img class="  colour-mix  colour-mix--opacity-1  "
+                alt="x to symbolise red" src="assets/ColourMix/red/colormix_red_icon_black_stroke_12px.svg"></div>
+
+
+          </figure>
+          <figure class=" colour-iconizer-container ">
+            <figcaption>Yellow</figcaption>
+            <div style="background-color: yellow;"
+            class="symbol--border  experiment-container__hue-block experiment-container__hue-block--small experiment-container__hue-block--black draggable-disabled">
+          </div>
+            <div class="symbol--border"><img class="     colour-mix colour-mix--opacity-1  "
+                alt=" lightning  to symbolise yellow" src="assets/ColourMix/yellow/colormix_yellow_icon_black_stroke_5px.svg"></div>
+
+
+          </figure>
+          <figure class=" colour-iconizer-container  ">
+            <figcaption>Orange</figcaption>
+            <div style="background-color: orange;"
+            class="symbol--border  experiment-container__hue-block experiment-container__hue-block--small experiment-container__hue-block--black draggable-disabled">
+          </div>
+            <div class="symbol--border">
+              <img class="     colour-mix colour-mix--opacity-6 img--overlay-move-down  "
+                alt="A mix of an red and yellow icons to symbolise orange"
+                src="assets/ColourMix/orange/colormix_orange_icon_black_stroke_3px.svg">
+            </div>
+
+
+          </figure>
+          <figure class=" colour-iconizer-container  ">
+            <figcaption>Green</figcaption>
+            <div style="background-color: green;"
+            class="symbol--border  experiment-container__hue-block experiment-container__hue-block--small experiment-container__hue-block--black draggable-disabled">
+          </div>
+            <div class="symbol--border"><img class="     colour-mix colour-mix--opacity-1  "
+                alt="a plus symbolising green" src="assets/ColourMix/green/colormix_green_icon_black_stroke_3px.svg"></div>
+
+
+          </figure>
+          <figure class=" colour-iconizer-container  ">
+          
+            <figcaption>Blue</figcaption>
+            <div style="background-color: blue;"
+            class="symbol--border  experiment-container__hue-block experiment-container__hue-block--small experiment-container__hue-block--black draggable-disabled">
+          </div>
+            <div class="symbol--border"><img class="     colour-mix colour-mix--opacity-1   hide-white-bg"
+                alt="a plus  symbolising blue" src="assets/ColourMix/blue/colormix_blue_icon_black_stroke_10px.svg"></div>
+
+
+          </figure>
+          <figure class=" colour-iconizer-container    ">
+
+            <figcaption>Bluish green </figcaption>
+            <div style="background-color: rgb(4, 126, 114);"
+            class="symbol--border  experiment-container__hue-block experiment-container__hue-block--small experiment-container__hue-block--black draggable-disabled">
+          </div>
+            <div class="symbol--border"><img class="     colour-mix colour-mix--opacity-5   "
+                alt="A mixture of blue and green symbols symbolising bluish green" src="assets/ColourMix/bluish-green/colormix_bluish-green_icon_black_stroke_6px.svg">
+
+             
+            </div>
+          </figure>
+          <figure class=" colour-iconizer-container   ">
+            <figcaption>Purple</figcaption>
+
+            <div style="background-color: purple"
+            class="symbol--border  experiment-container__hue-block experiment-container__hue-block--small experiment-container__hue-block--black draggable-disabled">
+          </div>
+            <div class="symbol--border"><img class="colour-mix colour-mix--opacity-6   hide-white-bg img--overlay-move-down"
+                alt="A mixture of red and blue symbols, symbolising purple" src="assets/ColourMix/purple/colormix_purple_icon_black_stroke_6px.svg">
+            </div>
+
+          </figure>
+          <figure class=" colour-iconizer-container   ">
+            <figcaption> Yellowish green </figcaption>
+            <div style="background-color: rgb(166, 255, 0)"
+            class="symbol--border  experiment-container__hue-block experiment-container__hue-block--small experiment-container__hue-block--black draggable-disabled">
+          </div>
+            <div class="symbol--border"><img class="     colour-mix colour-mix--opacity-5   "
+                alt="Mixtures of yellow and green symbols to symbolise yellowish green" src="assets/ColourMix/yellowish-green/colormix_yellowish-green_icon_black_stroke_6px.svg">
+
+               
+            </div>
+
+          </figure>
+          <figure class=" colour-iconizer-container  ">
+            <figcaption>Brown</figcaption>
+            <div style="background-color: #764700"
+            class="symbol--border  experiment-container__hue-block experiment-container__hue-block--small experiment-container__hue-block--black draggable-disabled">
+          </div>
+            <div class="symbol--border"><img class="     colour-mix colour-mix--opacity-12   "
+                alt="square that symbolises brown" src="assets/ColourMix/brown/colormix_brown_icon_black_stroke_5px.svg">
+            </div>
+
+
+          </figure>
+
+        </div>
+
+        <p class="experiment-container__faq-description ">An example of how to use Colour Mix is shown below.<span
+            class="bold">THE STROKE LINE THICKNESS AND TRANSPARENCY IS RELATIVE TO THE TRANSITION LINE'S START AND END
+            SYMBOLS.
+
+          </span>
+          The more transparent a symbol is and the less thick the symbol stroke width is, the less of
+          the colour is present in the mixture. The more opaque and the thicker the symbol stroke width is,
+          the more the colour is present in the mixture. Purple, bluish green, yellowish green and orange are
+          a mixture of two colours, combining their symbols. 
+        </p>
+
+        <ul>
+          <li>Red + yellow = orange. </li>
+
+          <li>Green + blue = bluish green . </li>
+
+          <li>Blue + red = purple. </li>
+
+          <li> Yellow + green = yellowish green</li>
+
+
+        </ul>
+
+        <p class="experiment-container__faq-description ">
+          When mixing a colour with grey, the greyer the colour, the more the drawing inside the symbol decreases in
+          size. The more saturated or less grey there is in a colour, the larger the symbol.
+           When a colour is completely grey, there is no symbol in the square.
+        </p>
+
+        <h6>Initial symbol stroke width to height ratio: 0.12</h6>
+        <div class="symbol-containers">
+          <figure class="colour-mix-container outline">
+
+
+            <div class="symbol--border"><img class="   colour-mix colour-mix--opacity-1 "
+                alt="x  to symbolise red" src="assets/ColourMix/red/colormix_red_icon_black_stroke_12px.svg">
+
+              <img class="   colour-mix colour-mix--opacity-10 img--overlay-move-up "
+                alt="lightning to symbolise yellow" src="assets/ColourMix/yellow/colormix_yellow_icon_black_stroke_1px.svg">
+            </div>
+
+          </figure>
+          <figure class="colour-mix-container  outline">
+
+            <div class="symbol--border"><img class="  colour-mix colour-mix--opacity-2 "
+                alt="x  to symbolise red" src="assets/ColourMix/red/colormix_red_icon_black_stroke_11px.svg">
+
+              <img class="   colour-mix colour-mix--opacity-9 img--overlay-move-up "
+                alt="lightning to symbolise yellow" src="assets/ColourMix/yellow/colormix_yellow_icon_black_stroke_3px.svg">
+            </div>
+
+          </figure>
+          <figure class="colour-mix-container  outline">
+
+            <div class="symbol--border"><img class="  colour-mix colour-mix--opacity-3 "
+                alt="x  to symbolise red" src="assets/ColourMix/red/colormix_red_icon_black_stroke_10px.svg">
+
+              <img class="   colour-mix colour-mix--opacity-8 img--overlay-move-up "
+                alt="lightning to symbolise yellow" src="assets/ColourMix/yellow/ColorMix_yellow_icon_black_stroke_4px.svg">
+            </div>
+
+          </figure>
+          <figure class="colour-mix-container  outline">
+
+            <div class="symbol--border"><img class="   colour-mix colour-mix--opacity-4 "
+                alt="x to symbolise red" src="assets/ColourMix/red/colormix_red_icon_black_stroke_8px.svg">
+
+              <img class="   colour-mix colour-mix--opacity-7 img--overlay-move-up "
+                alt="lightning to symbolise yellow" src="assets/ColourMix/yellow/colormix_yellow_icon_black_stroke_5px.svg">
+            </div>
+
+          </figure>
+          <figure class="colour-mix-container  outline">
+
+
+            <div class="symbol--border"><img class="  colour-mix colour-mix--opacity-5  "
+                alt="x to symbolise red" src="assets/ColourMix/red/colormix_red_icon_black_stroke_7px.svg">
+
+              <img class="   colour-mix colour-mix--opacity-6 img--overlay-move-up "
+                alt="lightning to symbolise yellow" src="assets/ColourMix/yellow/colormix_yellow_icon_black_stroke_6px.svg">
+            </div>
+
+          </figure>
+          <figure class="colour-mix-container  outline">
+
+
+            <div class="symbol--border"><img class="   colour-mix colour-mix--opacity-6 "
+                alt="x to symbolise red" src="assets/ColourMix/red/colormix_red_icon_black_stroke_6px.svg">
+
+              <img class="   colour-mix colour-mix--opacity-5 img--overlay-move-up "
+                alt="lightning to symbolise yellow" src="assets/ColourMix/yellow/colormix_yellow_icon_black_stroke_7px.svg">
+            </div>
+
+          </figure>
+          <figure class="colour-mix-container  outline ">
+
+            <div class="symbol--border"><img class="   colour-mix colour-mix--opacity-7 "
+                alt="x to symbolise red" src="assets/ColourMix/red/colormix_red_icon_black_stroke_5px.svg">
+
+              <img class="  colour-mix colour-mix--opacity-4 img--overlay-move-up "
+                alt="lightning  to symbolise yellow" src="assets/ColourMix/yellow/colormix_yellow_icon_black_stroke_8px.svg">
+            </div>
+
+          </figure>
+          <figure class="colour-mix-container  outline">
+            <figcaption></figcaption>
+
+            <div class="symbol--border"><img class="   colour-mix colour-mix--opacity-8 "
+                alt="x to symbolise red" src="assets/ColourMix/red/colormix_red_icon_black_stroke_4px.svg">
+
+              <img class="  colour-mix colour-mix--opacity-3 img--overlay-move-up "
+                alt="lightning  to symbolise yellow" src="assets/ColourMix/yellow/colorMix_yellow_icon_black_stroke_10px.svg">
+            </div>
+
+          </figure>
+          <figure class="colour-mix-container  outline">
+            <figcaption></figcaption>
+
+            <div class="symbol--border"><img class="   colour-mix colour-mix--opacity-9 "
+                alt="x to symbolise red" src="assets/ColourMix/red/colormix_red_icon_black_stroke_3px.svg">
+
+              <img class="   colour-mix colour-mix--opacity-2 img--overlay-move-up "
+                alt="lightning to symbolise yellow" src="assets/ColourMix/yellow/colormix_yellow_icon_black_stroke_11px.svg">
+            </div>
+
+          </figure>
+
+          <figure class="colour-mix-container outline">
+            <figcaption></figcaption>
+
+            <div class="symbol--border"><img class="   colour-mix colour-mix--opacity-10 "
+                alt="x to symbolise red" src="assets/ColourMix/red/colormix_red_icon_black_stroke_1px.svg">
+
+              <img class="   colour-mix colour-mix--opacity-1 img--overlay-move-up "
+                alt="lightning to symbolise yellow" src="assets/ColourMix/yellow/colormix_yellow_icon_black_stroke_12px.svg">
+            </div>
+
+          </figure>
+        </div>
+
+      </section>
+
+
+
+      <button id="start-experiment">Start experiment</button>
+
+      <section class="experiment-container display-none ">
+        <h3 class="experiment-container__sorting-title"> </h3>
+        <p id="faq-description" class="experiment-container__faq-description">
+        </p>
+
+        <div class="experiment-container__status">Number of sub tasks left: <span class="num-subtasks"> 90</span></div>
+
+        <div class="experiment-container__status">Time is: <span class="timer">0:00:000 </span> </div>
+
+        <div class="experiment-container__sorting-pane display-none-important">
+          <div class="colourInformation"> current selected colour is: <span class="currentColour">not picked </span></div>
+
+
+
+          <div class="experiment-container__hue-block-container ">
+
+            <div class="experiment-container__hue-block experiment-container__hue-block--big droppable">
+
+              <h4 class="experiment-container__hue-block-header">Red</h4>
+
+            </div>
+
+            <div class="experiment-container__hue-block experiment-container__hue-block--big droppable">
+
+              <h4 class="experiment-container__hue-block-header"> Orange</h4>
+
+
+            </div>
+
+            <div class="experiment-container__hue-block experiment-container__hue-block--big droppable">
+
+              <h4 class="experiment-container__hue-block-header"> Yellow</h4>
+
+
+            </div>
+
+            <div class="experiment-container__hue-block experiment-container__hue-block--big droppable">
+
+              <h4 class="experiment-container__hue-block-header"> Green</h4>
+
+
+            </div>
+
+            <div class="experiment-container__hue-block experiment-container__hue-block--big droppable">
+
+              <h4 class="experiment-container__hue-block-header"> Bluish green </h4>
+
+
+            </div>
+
+          </div>
+
+          <div class="experiment-container__hue-block-container">
+
+            <div class="experiment-container__hue-block experiment-container__hue-block--big droppable">
+
+              <h4 class="experiment-container__hue-block-header"> Blue</h4>
+
+
+            </div>
+
+            <div class="experiment-container__hue-block experiment-container__hue-block--big droppable">
+
+              <h4 class="experiment-container__hue-block-header"> Purple</h4>
+
+
+            </div>
+
+            <div class="experiment-container__hue-block experiment-container__hue-block--big droppable ">
+
+              <h4 class="experiment-container__hue-block-header"> Pink</h4>
+
+
+            </div>
+
+            <div class="experiment-container__hue-block experiment-container__hue-block--big droppable ">
+
+              <h4 class="experiment-container__hue-block-header"> Grey</h4>
+
+
+            </div>
+
+            <div class="experiment-container__hue-block experiment-container__hue-block--big  droppable">
+
+              <h4 class="experiment-container__hue-block-header"> Brown</h4>
+
+
+            </div>
+
+          </div>
+          <div id="draggable"
+            class="experiment-container__hue-block experiment-container__hue-block--small experiment-container__hue-block--margin display-none">
+
+          </div>
+
+          <div
+            class="experiment-container__hue-block experiment-container__hue-block--sorted-aided experiment-container__hue-block--small display-none ">
+
+
+          </div>
+
+
+
+        </div>
+
+        <div class="experiment-container__transition-pane display-none">
+
+          <div id="draggable-trans-aided" class="symbol-containers draggable-trans display-none-important">
+
+            <figure class="colour-mix-container outline draggable-disabled">
+              <div class="symbol--border  experiment-container__hue-block experiment-container__hue-block--small ">
+              </div>
+
+              <div class="symbol--border"><img class="colour-mix   hide-white-bg "
+                  alt="a symbol" src="assets/colourmix/white/blank.svg">
+
+                <img class="colour-mix   img--overlay-move-up hide-white-bg "
+                  alt="a symbol" src="assets/colourmix/white/blank.svg">
+              </div>
+
+            </figure>
+            <figure class="colour-mix-container outline  ">
+              <div
+                class=" symbol--border  experiment-container__hue-block experiment-container__hue-block--small  ">
+              </div>
+
+              <div class="symbol--border"><img class="colour-mix  hide-white-bg "
+                  alt="a symbol" src="assets/colourmix/white/blank.svg">
+
+                <img class="colour-mix   img--overlay-move-up hide-white-bg"
+                  alt="a symbol" src="assets/colourmix/white/blank.svg">
+              </div>
+
+            </figure>
+            <figure class="colour-mix-container  outline ">
+              <div
+                class=" symbol--border   experiment-container__hue-block experiment-container__hue-block--small   ">
+              </div>
+
+              <div class="symbol--border"><img class="colour-mix   hide-white-bg"
+                  alt="a symbol" src="assets/colourmix/white/blank.svg">
+
+                <img class="colour-mix   img--overlay-move-up hide-white-bg"
+                  alt="a symbol" src="assets/colourmix/white/blank.svg">
+              </div>
+
+            </figure>
+            <figure class="colour-mix-container outline  ">
+              <div
+                class=" symbol--border   experiment-container__hue-block experiment-container__hue-block--small    ">
+              </div>
+              <div class="symbol--border"><img class="colour-mix   hide-white-bg "
+                  alt="a symbol" src="assets/colourmix/white/blank.svg">
+
+                <img class="colour-mix   img--overlay-move-up hide-white-bg"
+                  alt="a symbol" src="assets/colourmix/white/blank.svg">
+              </div>
+
+            </figure>
+            <figure class="colour-mix-container outline  ">
+              <div
+                class=" symbol--border   experiment-container__hue-block experiment-container__hue-block--small ">
+              </div>
+
+
+              <div class="symbol--border"><img class="colour-mix    hide-white-bg"
+                  alt="a symbol" src="assets/colourmix/white/blank.svg">
+
+                <img class="colour-mix   img--overlay-move-up  hide-white-bg"
+                  alt="a symbol" src="assets/colourmix/white/blank.svg">
+              </div>
+
+            </figure>
+            <figure class="colour-mix-container  outline ">
+              <div
+                class=" symbol--border   experiment-container__hue-block experiment-container__hue-block--small  ">
+              </div>
+
+              <div class="symbol--border"><img class="colour-mix   hide-white-bg"
+                  alt="a symbol" src="assets/colourmix/white/blank.svg">
+
+                <img class="colour-mix   img--overlay-move-up  hide-white-bg"
+                  alt="a symbol" src="assets/colourmix/white/blank.svg">
+              </div>
+
+            </figure>
+            <figure class="colour-mix-container  outline ">
+              <div
+                class=" symbol--border   experiment-container__hue-block experiment-container__hue-block--small ">
+              </div>
+
+
+              <div class="symbol--border"><img class="colour-mix   hide-white-bg "
+                  alt="a symbol" src="assets/colourmix/white/blank.svg">
+
+                <img class="colour-mix   img--overlay-move-up hide-white-bg"
+                  alt="a symbol" src="assets/colourmix/white/blank.svg">
+              </div>
+
+            </figure>
+            <figure class="colour-mix-container outline  ">
+              <div
+                class="symbol--border experiment-container__hue-block experiment-container__hue-block--small">
+              </div>
+
+
+              <div class="symbol--border"><img class="colour-mix   hide-white-bg "
+                  alt="a symbol" src="assets/colourmix/white/blank.svg">
+
+                <img class="colour-mix   img--overlay-move-up hide-white-bg "
+                  alt="a symbol" src="assets/colourmix/white/blank.svg">
+              </div>
+
+            </figure>
+            <figure class="colour-mix-container  outline">
+              <div
+                class="  symbol--border   experiment-container__hue-block experiment-container__hue-block--small  ">
+              </div>
+
+
+              <div class="symbol--border"><img class="colour-mix    hide-white-bg"
+                  alt="a symbol" src="assets/colourmix/white/blank.svg">
+
+                <img class="colour-mix   img--overlay-move-up  hide-white-bg"
+                  alt="a symbol" src="assets/colourmix/white/blank.svg">
+              </div>
+
+            </figure>
+
+            <figure class="colour-mix-container outline draggable-disabled">
+              <div
+                class="  symbol--border   experiment-container__hue-block experiment-container__hue-block--small">
+              </div>
+              <div class="symbol--border"><img class="colour-mix  hide-white-bg"
+                  alt="a symbol" src="assets/colourmix/white/blank.svg">
+
+                <img class="colour-mix img--overlay-move-up  hide-white-bg"
+                  alt="a symbol" src="assets/colourmix/white/blank.svg">
+              </div>
+
+            </figure>
+          </div>
+     
+
+          <div id="draggable-trans-unaided" class="draggable-trans display-none-important">
+
+
+            <div
+              class="symbol--border outline experiment-container__hue-block experiment-container__hue-block--small  draggable-disabled">
+            </div>
+
+            <div
+              class=" symbol--border outline experiment-container__hue-block experiment-container__hue-block--small    ">
+            </div>
+
+            <div
+              class=" symbol--border outline  experiment-container__hue-block experiment-container__hue-block--small    ">
+            </div>
+
+            <div
+              class=" symbol--border  outline experiment-container__hue-block experiment-container__hue-block--small    ">
+            </div>
+
+
+            <div
+              class=" symbol--border outline  experiment-container__hue-block experiment-container__hue-block--small ">
+            </div>
+
+
+            <div
+              class=" symbol--border outline  experiment-container__hue-block experiment-container__hue-block--small  ">
+            </div>
+
+            <div
+              class=" symbol--border outline  experiment-container__hue-block experiment-container__hue-block--small  ">
+            </div>
+
+            <div
+              class="  symbol--border  outline experiment-container__hue-block experiment-container__hue-block--small   ">
+            </div>
+
+            <div
+              class="  symbol--border outline  experiment-container__hue-block experiment-container__hue-block--small  ">
+            </div>
+
+
+            <div
+              class="  symbol--border  outline experiment-container__hue-block experiment-container__hue-block--small  draggable-disabled">
+            </div>
+          </div>
+        </div>
+        <a id="results" class="display-none-important"> results</a>
+
+        <button class="continue display-none-important"> continue</button>
+
+
+        <button class="next-task "  >next task</button>
+
+
+
+
+      </section>
+
+    </main>
+
+  </div>
+
+
+
+
+
+
+  <script defer src="js/script.js">
+
+
+  </script>
+
+
+</body>
+
+
+</html>
