@@ -554,14 +554,16 @@ $(document).ready(function () {
 
   function getResults(participant) {
     const link = document.getElementById("results");
-
+    const buttonNextTask = document.getElementsByClassName("next-task")[0];
+    
     displayElement(link);
+    removeElement(buttonNextTask); // add this line
+    
     const text = participant.getResults;
-
     const file = new Blob([text], { type: "text/plain" });
     link.href = URL.createObjectURL(file);
     link.download = "results.txt";
-  }
+}
 
   let openModal = () => {
     let modalBtn = document.getElementsByClassName("login-modal__login-btn")[0];
