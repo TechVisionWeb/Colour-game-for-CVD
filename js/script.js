@@ -599,7 +599,7 @@ $(document).ready(function () {
                 Task.getTaskCount()
               ].getSortedSubTasks[SortedSubTask.getSortedSubTaskCount()];
 
-            currentSubTask.setColourChosen = $(this).find("h6").text();
+            currentSubTask.setColourChosen = $(this).find("h4").text();
 
 
 
