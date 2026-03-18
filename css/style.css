@@ -960,13 +960,11 @@ h4{
     font-weight: 600;
     font-size: 1.4rem;
     text-align: center;
-    background-color: rgb(61, 59, 59);
-    color: white;
-    margin-top: 0.5rem;
+    /* background-color: rgb(61, 59, 59); */
+    color: black;
     border-radius: 5px;
-
-    width: calc(100% - 300px);
-    min-width: 300px;
+    /* width: calc(100% - 300px); */
+    /* min-width: 300px; */
     margin: 0.5rem auto;
 }
 
